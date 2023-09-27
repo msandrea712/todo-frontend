@@ -1,10 +1,19 @@
 import './App.css';
-
+import {BrowserRouter,Routes,Route}from "react-router-dom"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import NewTodo from "./pages/NewTodo"
+import NotFound from "./pages/NotFound"
 function App() {
   return (
-    <div className="App">
-     <h1>todo app</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/about" element={<About/>} /> 
+      <Route path="/newtodo" element={<NewTodo/>}/>
+      <Route path="*" element={<NotFound/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
