@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import "../styles/rootlayout.css"
 
 function RootLayout({children}) {
   return (
-    <div>
+    <div className= "main-container">
         <header>
             <Navbar/>
         </header>
