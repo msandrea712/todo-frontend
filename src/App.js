@@ -7,10 +7,11 @@ import NotFound from "./pages/NotFound"
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 function App() {
+  const baseURL="http://localhost:3001/todos"
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home/>}/>
+      <Route path="/" element={<Home baseURL={baseURL}/>}/>
       <Route path="/about" element={<About/>} /> 
       <Route path="/newtodo" element={<NewTodo/>}/>
       <Route path="*" element={<NotFound/>}/>
