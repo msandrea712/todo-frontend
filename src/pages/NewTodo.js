@@ -1,8 +1,13 @@
 import React from 'react'
+import RootLayout from '../layouts/RootLayout'
 
 function NewTodo() {
   return (
-    <div>NewTodo</div>
+    <RootLayout>
+      <main>
+        newtodo
+      </main>
+    </RootLayout>
   )
 }
 
