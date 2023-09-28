@@ -1,8 +1,13 @@
 import React from 'react'
+import RootLayout from '../layouts/RootLayout'
 
 function Home() {
   return (
-    <div>Home</div>
+    <RootLayout>
+      <main>
+        
+      </main>
+    </RootLayout>
   )
 }
 
