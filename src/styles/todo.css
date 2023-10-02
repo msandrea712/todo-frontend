@@ -1,0 +1,19 @@
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.completed{
+    background-color: #f0f0f0;
+    text-decoration: line-through;
+}
+.todo-actions{
+    display: flex;
+}
+.todo-actions svg{
+    cursor: pointer;
+    margin-left: 10px;
+    fill: #333;
+}
