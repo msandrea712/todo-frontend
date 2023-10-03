@@ -43,7 +43,7 @@ function NewTodo({addTodo,baseURL}) {
     
   }
   return (
-    <RootLayout>
+    <RootLayout title="New Todo">
       <main className="new-todo-container">
         <h2>
           create new todo

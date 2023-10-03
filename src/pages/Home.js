@@ -16,7 +16,7 @@ return response.json()
     })
   },[])
   return (
-    <RootLayout>
+    <RootLayout title="Todo App">
       <main className='home-container'>
         <TodoList todos={todos}></TodoList>
       </main>

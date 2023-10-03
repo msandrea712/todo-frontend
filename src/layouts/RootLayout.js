@@ -3,11 +3,14 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../styles/rootlayout.css"
 
-function RootLayout({children}) {
+function RootLayout({children,title}) {
   return (
     <div className= "main-container">
         <header>
             <Navbar/>
+            <h1>
+              {title}
+            </h1>
         </header>
         {children}
         <Footer/>

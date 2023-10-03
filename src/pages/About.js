@@ -3,7 +3,7 @@ import RootLayout from '../layouts/RootLayout'
 import "../styles/about.css"
 function About() {
   return (
-    <RootLayout>
+    <RootLayout title="About Us"> 
       <main className='about-main'>
         <p>
           {" "}
