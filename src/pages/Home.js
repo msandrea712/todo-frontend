@@ -1,7 +1,7 @@
 import {useEffect} from 'react'
 import RootLayout from '../layouts/RootLayout'
 import TodoList from '../components/TodoList'
-
+import "../styles/home.css"
 function Home({baseURL,todos,setTodos}) {
   useEffect(function(){
     fetch(baseURL)
@@ -17,7 +17,7 @@ return response.json()
   },[])
   return (
     <RootLayout>
-      <main>
+      <main className='home-container'>
         <TodoList todos={todos}></TodoList>
       </main>
     </RootLayout>
