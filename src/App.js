@@ -15,7 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home baseURL={baseURL} todos={todos} setTodos={setTodos}/>}/>
       <Route path="/about" element={<About/>} /> 
-      <Route path="/newtodo" element={<NewTodo/>}/>
+      <Route path="/newtodo" element={<NewTodo baseURL={baseURL}/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
     </BrowserRouter>
