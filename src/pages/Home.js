@@ -15,10 +15,31 @@ return response.json()
       console.log ("error fetching todos",error)
     })
   },[])
+  const toggleCompleted=(id)=>{
+    const updatedTodos=todos.map(function(todo){
+     return todo.id===id?{...todo,completed: !todo.completed}:todo
+    })
+    setTodos(updatedTodos)
+    fetch(baseURL+"/" + id, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        completed: !todos.find((todo) => todo.id === id).completed,
+      }),
+    })
+    .then(function(response){
+      return response.json()
+    })
+    .catch(function(error){
+      console.log ("error updated todo",error)
+    })
+  }
   return (
     <RootLayout title="Todo App">
       <main className='home-container'>
-        <TodoList todos={todos}></TodoList>
+        <TodoList todos={todos} toggleCompleted={toggleCompleted}></TodoList>
       </main>
     </RootLayout>
   )
