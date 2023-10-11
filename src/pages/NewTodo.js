@@ -57,8 +57,8 @@ function NewTodo({addTodo,baseURL}) {
           </div>
           <div className="form-group">
             <label>
-              completed
-              <input classNAme="form-checkbox" type="checkbox" name="completed" value={newTodo.completed} onChange={()=>
+              completed 
+              <input className="form-checkbox" type="checkbox" name="completed" value={newTodo.completed} onChange={()=>
               setNewTodo({...newTodo,completed:!newTodo.completed})}/>
             </label>
           </div>
@@ -66,7 +66,7 @@ function NewTodo({addTodo,baseURL}) {
             create todo
           </button>
         </form>
-        {error&&<p>{error}</p>}
+        {error&&<p className='error'>{error}</p>}
       </main>
     </RootLayout>
   )
