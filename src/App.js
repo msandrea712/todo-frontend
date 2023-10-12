@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import {useState} from 'react'
 function App() {
-  const baseURL="http://localhost:3001/todos"
+  const baseURL = "https://todoappbackend-djpw.onrender.com/todos";
   const [todos,setTodos]=useState([])
   const addTodo=(newTodo)=>{
     setTodos(function(prev){
